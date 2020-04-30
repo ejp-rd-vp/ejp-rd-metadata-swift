@@ -1,13 +1,6 @@
-//
-//  Location.swift
-//  App
-//
-//  Created by David van Enckevort on 15/07/2019.
-//
-
 import Foundation
 
-struct Location: Codable {
-    let city: String
-    let country: String
+public struct Location: Codable {
+    public let city: String
+    public let country: String
 }

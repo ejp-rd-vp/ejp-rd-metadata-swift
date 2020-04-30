@@ -1,22 +1,15 @@
-//
-//  Dataset.swift
-//  App
-//
-//  Created by David van Enckevort on 15/07/2019.
-//
-
 import Foundation
 
-struct Dataset: Codable {
-    let id: URL
-    let type = "BiobankDataset"
-    let name: String
-    let theme: [Theme]
-    let publisher: Publisher
-    let numberOfPatients: Int
-    let context = URL(string: "https://raw.githubusercontent.com/ejp-rd-vp/resource-metadata-schema/master/ejp_vocabulary_context.json")!
+public struct Dataset: Codable {
+    public let id: URL
+    public let type = "BiobankDataset"
+    public let name: String
+    public let theme: [Theme]
+    public let publisher: Publisher
+    public let numberOfPatients: Int
+    public let context = URL(string: "https://raw.githubusercontent.com/ejp-rd-vp/resource-metadata-schema/master/ejp_vocabulary_context.json")!
 
-    init(id: URL, name: String, theme: [Theme], publisher: Publisher, numberOfPatients: Int) {
+    public init(id: URL, name: String, theme: [Theme], publisher: Publisher, numberOfPatients: Int) {
         self.id = id
         self.name = name
         self.theme = theme

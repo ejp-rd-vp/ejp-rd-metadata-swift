@@ -1,20 +1,13 @@
-//
-//  Catalog.swift
-//  App
-//
-//  Created by David van Enckevort on 15/07/2019.
-//
-
 import Foundation
 
-struct Catalog: Codable {
-    let id: URL
-    let datasets: [URL]
-    let type = "CatalogOfRegistries"
-    let publisher: Publisher
-    let context = URL(string: "https://raw.githubusercontent.com/ejp-rd-vp/resource-metadata-schema/master/ejp_vocabulary_context.json")!
+public struct Catalog: Codable {
+    public let id: URL
+    public let datasets: [URL]
+    public let type = "CatalogOfRegistries"
+    public let publisher: Publisher
+    public let context = URL(string: "https://raw.githubusercontent.com/ejp-rd-vp/resource-metadata-schema/master/ejp_vocabulary_context.json")!
 
-    init(id: URL, datasets: [URL], publisher: Publisher) {
+    public init(id: URL, datasets: [URL], publisher: Publisher) {
         self.id = id
         self.datasets = datasets
         self.publisher = publisher
